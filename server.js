@@ -1,7 +1,7 @@
 var express = require('express')
   , logger = require('morgan')
   , app = express()
-  , hometemplate = require('jade').compileFile(__dirname + '/source/templates/homepage.jade')
+  , hometemplate = (__dirname + '/static/index.html')
   
 app.use(logger('dev'))
 app.use(express.static(__dirname + '/static'))

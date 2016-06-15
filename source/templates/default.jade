@@ -2,14 +2,15 @@ doctype html
 html
   head
     link(rel='stylesheet', href='/css/index.css')
-    title Evan Shaws page
-  body
-    ul.nav
+    title Evan Shaws page 
+  
+  header.navbar.navbar-fixed-top.navbar-inverse
+    ul.nav.navbar-nav.navbar-right
       li: a(href='/') Home
       li: a(href='#生徒へ') 生徒へ
       li: a(href='about') About / アバウト
-      li: a(href='#contact') Contact 
-   
+      li: a(href='login') Log in
+  body
     .main-content
       block content
 

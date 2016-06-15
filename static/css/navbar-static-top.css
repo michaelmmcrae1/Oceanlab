@@ -1,0 +1,19 @@
+body {
+  min-height: 2000px;
+}
+
+.leftcontainer {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 500px;
+}  
+
+.rightcontainer {
+  box-sizing: border-box;
+  display: inline-block;
+  float: right;
+}  
+
+.navbar-static-top {
+  margin-bottom: 19px;
+}
