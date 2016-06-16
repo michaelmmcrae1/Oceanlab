@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Oceanlab | The language class SRS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/navbar-static-top.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Oceanlab</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="students.html">生徒へ</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h2 style="text-align:center; margin-bottom:40px;">下記は生徒向きの短いガイドです。</h2>
+        <h1 style="text-align:center; margin-bottom:20px; text-decoration:underline;">Anki</h1>
+        
+        <p>Ankiとは、分散学習(Spaced Repetition)ができるフラッシュカードです。</p>
+		
+		<p>Ankiでは思い出しやすさで次の復習のタイミングが決まります。覚えにくいカードは頻繁に復習し、
+		簡単に記憶できたカードは時間をあけて記憶を確認します。</p>
+
+		<p>これはAnkiで作れるカードです：</p>
+		
+		<style>
+		.ankiimg {
+			box-sizing: box-border;
+			width: 45%;
+			margin: 10px;
+			margin-bottom: 30px;
+			display: inline-block;
+		}
+		img.anki {
+			width: 100%;
+		}	
+		</style>
+		<div class="ankiimg">
+        <p style="font-size:200%;text-align:center;">表</p>
+		<img src="files/AnkiIMG1.jpg" title="表" class="anki">
+		</div>
+		<div class="ankiimg">
+		<p style="font-size:200%;text-align:center;">裏</p>
+		<img src="files/AnkiIMG2.jpg" class="anki"> 
+		</div>
+        
+        <p>このような原則に基づくと効果的な結果が得られるという学習理論に基づいて作られています。
+		多量のカードを持っていても、結果として一日の復習量は散らばって、負担を軽減してくれます。</p>
+		
+		<p>ここでAnkiの日本語のガイドが見つけられます：http://rightstuff.luminousspice.com/how-to-anki/</p>
+		<br>
+		
+		<h1 style="text-align:center; margin:20px; text-decoration:underline;">Subs2srs</h1>
+        
+        <p>subs2srsはAnkiで好きなテレビ番組か映画の字幕を勉強することが出来るソフトです。Subs2srsは全ての字幕と
+         オーディオとタイミングの情報を別のAnkiカードに出来ます。</p>
+         
+        <p>これはsubs2srsで作れるカードです:</p>
+		
+        <p style="text-align:center;"><img class="centerImage" src="files/Subs2srsIMG.jpg" style="margin:20px;"></p>
+        
+        <p>無料でsubs2srsをダウンロードが出来ます > http://sourceforge.net/projects/subs2srs/files/ > 
+        “Looking for the latest version? Download subs2srs_vNANINANI.zip”と書いてあるリンクを押します。</p> 
+
+		<p>Q: 私はなぜこれを使ったらいいんですか?
+		私はどんな他の方法よりもsubs2srsを使っています。とても便利で役に立つソフトなんです。                 
+		Subs2srsの長所は自然な英語が身につけられるところです。これで外国人は実際に何を言うかよく分かります。</p>
+
+		<p>Q: それはいいですねエバン。でも、何も分からないんです。 
+		私も何も分かりませんでした。最初からよく単語と文法を検索しなければならないから難しいです。安心してください。それは当たり前のことです。
+		勉強すれば勉強するほど簡単になります。でも、本当に特定のカードの意味が掴めなかったら削除して続けられます。</p>
+
+		<p>Q: どのようにsubs2srsを使いますか？ 
+		残念ですがインタフェースを英語だけで使えて英語が喋れる人にとっても設定の詳しさは圧倒的に見えます。心配しないでください。
+		私は順番に詳しく案内していきます。例としてデスノートのエピソードを使います。 </p>
+
+		<p>完全なガイドがほしいなら、<a href="files/Subs2srs日本語.pdf">ここで</a>ダウンロードが出来ます。</p>
+	  </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

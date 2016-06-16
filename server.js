@@ -1,10 +1,10 @@
 var express = require('express')
   , logger = require('morgan')
   , app = express()
-  , hometemplate = (__dirname + '/static/index.html')
+  , hometemplate = (__dirname + '/src/index.html')
   
 app.use(logger('dev'))
-app.use(express.static(__dirname + '/static'))
+app.use(express.static(__dirname + '/src'))
 
 app.get('/', function (req, res, next) {
   try {
