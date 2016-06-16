@@ -14,6 +14,17 @@ module.exports = function(grunt) {
     // this way we can use things like name and version (pkg.name)
     pkg: grunt.file.readJSON('package.json'),
     
+    inject: {
+		multiple: {
+			scriptSrc: ['livereload.js'],
+				files: [{
+				expand: true,
+				cwd: 'src',
+				src: ['**/*.html'],
+				dest: 'dist'
+    }]
+  }
+},
     concurrent: {
   dev: {
     tasks: ['nodemon', 'node-inspector', 'watch'],
@@ -24,7 +35,7 @@ module.exports = function(grunt) {
 },
 nodemon: {
   dev: {
-    script: 'index.js',
+    script: 'server.js',
     options: {
       nodeArgs: ['--debug'],
       env: {
@@ -58,11 +69,14 @@ nodemon: {
 },
 watch: {
   server: {
-    files: ['.rebooted'],
     options: {
+	  // Start a live reload server on the default port 35729
       livereload: true
     }
-  } 
+    css: {
+		files: ['**/*'],
+	}	
+  }
 },
 
     // all of our configuration will go here

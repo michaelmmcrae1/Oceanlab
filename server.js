@@ -1,10 +1,10 @@
 var express = require('express')
   , logger = require('morgan')
   , app = express()
-  , hometemplate = (__dirname + '/src/index.html')
+  , hometemplate = (__dirname + '/index.html')
   
 app.use(logger('dev'))
-app.use(express.static(__dirname + '/src'))
+app.use(express.static(__dirname))
 
 app.get('/', function (req, res, next) {
   try {
@@ -16,5 +16,5 @@ app.get('/', function (req, res, next) {
 })
 
 app.listen(process.env.PORT || 3000, function () {
-  console.log('Listening on http://localhost:' + (process.env.PORT || 3000))
+  console.log('Listening on http://localhost:' + (process.env.PORT || 5455))
 })

@@ -2,7 +2,7 @@
   "name": "oceanlab",
   "version": "1.0.0",
   "description": "A language SRS for teachers and their students",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build-css": "stylus dist/stylesheets/index.styl -o dist/css",
     "watch-css": "stylus dist/stylesheets/index.styl -o dist/css -w",
@@ -26,6 +26,7 @@
     "grunt-run": "^0.6.0",
     "jade": "^1.11.0",
     "jshint-stylish": "latest",
+    "livereload": "^0.4.1",
     "load-grunt-tasks": "^3.5.0",
     "morgan": "^1.7.0",
     "nodemon": "^1.9.2",
