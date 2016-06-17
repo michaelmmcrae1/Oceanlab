@@ -7,7 +7,7 @@ var app     = express(),
   
 //app.use(logger('dev'))
 //app.set('views', __dirname + '/static')
-app.use(express.static(__dirname + '/static'));
+app.use(express.static('static'));
 //app.use(router);
 //app.set('view engine', 'jade');a
 
