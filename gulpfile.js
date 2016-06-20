@@ -58,7 +58,6 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .pipe(gulp.dest('dist/assets/js'))
     //.pipe(notify({ message: 'Scripts task complete' }))
-    livereload.listen();
 });
 
 // Compress images
@@ -75,29 +74,16 @@ gulp.task('clean', function() {
     return del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img']);
 });
 
-// Launch server
-gulp.task('connect', function() {
-  server.server({
-    root: 'pages',
-    livereload: true
-  });
-});
- 
-gulp.task('html', function () {
-  gulp.src('./pages/*.html')
-	.pipe(livereload())
-	.pipe(notify('Reloading page, please wait...'))
-});
-
 // Watching
 gulp.task('watch', function() {
-  // Watch html files
-  //livereload.listen();
-  gulp.watch('pages/*.html', ['html']);
+  // Create LiveReload server
+  livereload.listen();
+
+  // Watch any files in dist/, reload on change
+  gulp.watch(['pages/**']).on('change', livereload.changed);
 });
 
 gulp.task('nodemon', function () {
-  livereload.listen();
   nodemon({
     script: 'server.js',
     ext: 'js',
@@ -105,7 +91,7 @@ gulp.task('nodemon', function () {
       'NODE_ENV': 'development'
     }
   })
-    .on('start', ['watch'])
+    .on('start', ['watch', 'clean', 'scripts', 'images', 'move'])
 });
 
 // Default, run by $gulp
