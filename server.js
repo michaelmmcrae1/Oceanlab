@@ -26,10 +26,14 @@ app.get('/', function(req, res) {
     res.sendFile('pages/index.html', opts);
 });
 
-app.get('/about', function(req, res) {
+app.get('/about.html', function(req, res) {
     res.sendFile('pages/about.html', opts); 
 });
 
-app.listen(process.env.PORT || 5455, function () {
-  console.log('Listening on http://localhost:' + (process.env.PORT || 5455));
+app.get('/students.html', function(req, res) {
+    res.sendFile('pages/students.html', opts); 
+});
+
+app.listen(process.env.PORT || 8080, function () {
+  console.log('Listening on http://localhost:' + (process.env.PORT || 8080));
 });
